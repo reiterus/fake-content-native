@@ -15,6 +15,7 @@ use Reiterus\FakeContent\Contract\DataInterface;
 use Reiterus\FakeContent\Contract\FakeInterface;
 use Reiterus\FakeContent\Contract\HelperInterface;
 use Reiterus\FakeContent\Contract\SlugInterface;
+use Reiterus\FakeContent\Contract\OutputInterface;
 
 /**
  * Fake Content Generate
@@ -22,7 +23,7 @@ use Reiterus\FakeContent\Contract\SlugInterface;
  * @package Reiterus\FakeContent
  * @author Pavel Vasin <reiterus@yandex.ru>
  */
-class Fake implements FakeInterface
+class Fake implements FakeInterface, OutputInterface
 {
     protected SlugInterface $slug;
     protected HelperInterface $helper;
@@ -147,5 +148,15 @@ class Fake implements FakeInterface
             self::SLUG => $this->getSlug(),
             self::PUBLISHED => $this->getPublished(),
         ];
+    }
+
+    /**
+     * Get fake as json with JSON_UNESCAPED_UNICODE
+     *
+     * @return string
+     */
+    public function toJson(): string
+    {
+        return \json_encode($this->toArray(), 256);
     }
 }

@@ -67,11 +67,4 @@ interface FakeInterface
      * @return string
      */
     public function getPublished(): string;
-
-    /**
-     * Get fake as array
-     *
-     * @return array
-     */
-    public function toArray(): array;
 }
