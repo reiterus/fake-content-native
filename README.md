@@ -11,6 +11,7 @@ The package is very easy to use.
 use Reiterus\FakeContent\Data\Russian as DataRus;
 use Reiterus\FakeContent\Slug\Russian as SlugRus;
 use Reiterus\FakeContent\Fake;
+use Reiterus\FakeContent\Helper;
 
 $data = new DataRus();
 $slug = new SlugRus();
