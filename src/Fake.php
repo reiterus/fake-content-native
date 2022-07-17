@@ -72,8 +72,7 @@ class Fake implements FakeInterface, OutputInterface
      */
     public function getDescription(): string
     {
-        $str = implode(' ', $this->data);
-        $slice = substr($str, 0, 256);
+        $slice = substr($this->getContent(), 0, 128);
         $exp = explode(' ', $slice);
         $result = implode(' ', array_slice($exp, 0,-1));
 
@@ -100,11 +99,12 @@ class Fake implements FakeInterface, OutputInterface
     public function getContent(): string
     {
         $result = [];
+        $words = $this->data;
 
         for ($i = 0; $i < $this->helper->getPhrases(); $i++) {
-            shuffle($this->data);
+            shuffle($words);
             $rand = rand($this->helper->getMinWords(), $this->helper->getMaxWords());
-            $slice = array_slice($this->data, 0, $rand);
+            $slice = array_slice($words, 0, $rand);
             $result[] = $this->helper->utfUcFirst(implode(' ', $slice)) . '.';
         }
 
