@@ -30,7 +30,6 @@ class English implements SlugInterface
      */
     public function transliteration(string $title): string
     {
-        //TODO Implement transliteration
         return mb_strtolower(trim($title));
     }
 }

@@ -1,51 +1,51 @@
 # Simple Fake Content Generator
 
 With this package you will be able to generate fake content for your website. 
-By default, three languages are available: Russian, German and English.
+By default, two languages are available: English and Russian.
 
 # Usage
 
 The package is very easy to use.
 
 ```php
-use Reiterus\FakeContent\Data\Russian as DataRus;
-use Reiterus\FakeContent\Slug\Russian as SlugRus;
+use Reiterus\FakeContent\Data\English as DataEng;
+use Reiterus\FakeContent\Slug\English as SlugEng;
 use Reiterus\FakeContent\Fake;
 use Reiterus\FakeContent\Helper;
 
-$data = new DataRus();
-$slug = new SlugRus();
+$data = new DataEng();
+$slug = new SlugEng();
 $helper = new Helper();
 
 $article = new Fake($data, $slug, $helper);
 
 echo $article->getTitle();
 /*
-Использование технологий единую сельское
+Production England highly two
 */
 
 print_r($article->toArray());
 /*
 Array
 (
-  [title] => Использование технологий единую сельское
-  [description] => Использование технологий единую сельское цифровое...
-  [keywords] => использование, технологий, единую, сельское, цифровое, ...
-  [content] => Использование технологий единую сельское цифровое. Использование ...
-  [slug] => ispolzovanie-tehnologiy-edinuyu-selskoe
-  [published] => 2022-07-16 12:05:09
+  [title] => Production England highly two
+  [description] => Intensive production standards livestock. Production...
+  [keywords] => production, England, highly, two, intensive, about, ...
+  [content] => Intensive England livestock arable today about production. Arable ...
+  [slug] => production-england-highly-two
+  [published] => 2022-07-17 06:40:55
 )
 */
 
 echo $article->toJson();
 /*
 {
-  "title": "Использование технологий единую сельское",
-  "description": "Использование технологий единую сельское цифровое...",
-  "keywords": "использование, технологий, единую, сельское, цифровое, ...",
-  "content": "Использование технологий единую сельское цифровое. Использование ...",
-  "slug": "ispolzovanie-tehnologiy-edinuyu-selskoe",
-  "published": "2022-07-16 12:05:09"
+  "title": "Production England highly two",
+  "description": "Intensive production standards livestock. Production...",
+  "keywords": "production, England, highly, two, intensive, about, ...",
+  "content": "Intensive England livestock arable today about production. Arable ...",
+  "slug": "production-england-highly-two",
+  "published": "2022-07-17 06:40:55"
 }
 */
 ```
