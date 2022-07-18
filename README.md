@@ -3,6 +3,10 @@
 With this package you will be able to generate fake content for your website. 
 By default, two languages are available: English and Russian.
 
+![Coverage](coverage.png)
+
+See more in the [#Tests](#Tests) section.
+
 # Usage
 
 The package is very easy to use.
@@ -69,6 +73,19 @@ From GitHub repository
  ]
 }
 ```
+
+# Tests
+
+To run tests with visual code coverage, launch the command as follows:
+
+```shell
+XDEBUG_MODE=coverage ./vendor/phpunit/phpunit/phpunit \
+--configuration phpunit.xml \
+--testsuite default \
+--coverage-html coverage/
+```
+
+Test results will be saved in the `coverage` directory.
 
 # License
 

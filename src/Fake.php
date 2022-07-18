@@ -31,6 +31,7 @@ class Fake implements FakeInterface, OutputInterface
     private array $data;
 
     /**
+     * @codeCoverageIgnore
      * @param DataInterface $dataContract
      * @param SlugInterface $slug
      * @param HelperInterface $helper
