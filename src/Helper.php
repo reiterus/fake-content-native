@@ -79,6 +79,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @return int
      */
     public function getPhrases(): int
@@ -87,6 +88,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @param int $phrases
      */
     public function setPhrases(int $phrases): void
@@ -95,6 +97,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @return int
      */
     public function getMinWords(): int
@@ -103,6 +106,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @param int $minWords
      */
     public function setMinWords(int $minWords): void
@@ -111,6 +115,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @return int
      */
     public function getMaxWords(): int
@@ -119,6 +124,7 @@ class Helper implements HelperInterface
     }
 
     /**
+     * @codeCoverageIgnore
      * @param int $maxWords
      */
     public function setMaxWords(int $maxWords): void
